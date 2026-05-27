@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const pool = require('../config/db')
 
 const dbMiddleware = (req,res,next)=>{
@@ -5,4 +6,12 @@ const dbMiddleware = (req,res,next)=>{
     next()
 }
 
+=======
+const db = require('../config/db')
+
+const dbMiddleware = (req,res,next)=>{
+    req.db = db
+    next()
+}
+>>>>>>> main
 module.exports = dbMiddleware
